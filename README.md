@@ -1,68 +1,67 @@
-## WORKSHOP 2 LINK
-[Go to the final report PDF](./Workshop_2/Workshop_2_SystemsAnalysis.pdf)
+# Workshop 3: Systems Analysis
 
-## Project Overview
+## Documentation
 
-This repository contains the results and insights from Workshop 2, where we designed a system to detect mathematical misconceptions in multiple-choice questions, based on the Kaggle competition: [EEDI - Mining Misconceptions in Mathematics](https://www.kaggle.com/competitions/eedi-mining-misconceptions-in-mathematics/overview).
+### 📋 Full Report
+For detailed analysis, methodology, and complete results:
+**[Workshop 3 - Systems Analysis Report](Workshop_3/workshop_3_SystemsAnalysis.pdf)**
 
-Our goal was to predict the affinity between distractor options (wrong answers) and potential misconceptions, contributing to better AI-supported educational tools.
+### 💻 Simulation Files
+Access the complete simulation implementation and code:
+**[Workshop 3 - Simulation Files](Workshop_3/Workshop_3_Simulation/)**
 
-## 🔍 Initial Analysis – Workshop 1 Review
+## Key Learnings
+- Advanced systems analysis techniques and their practical applications
+- Integration of modeling and simulation for comprehensive system evaluation
+- Performance optimization through systematic analytical approaches
+- Critical thinking in complex system problem-solving scenarios
 
-We began this workshop by revisiting the findings from Workshop 1. There, we analyzed the competition and broke down the main components of the system:
+## Overview
+This workshop focuses on comprehensive systems analysis through modeling, simulation, and performance evaluation. The project implements advanced analytical techniques to understand system behavior and optimize performance through systematic analysis.
 
-- *Key Elements:* Questions, correct answers, distractors, and misconceptions.
-- *Sensitivity:* The system is highly sensitive to small input changes (e.g., wording of questions).
-- *Structure:* Questions are strictly mathematical with one correct answer and three distractors per question.
+## Objectives
+- Develop comprehensive system models for complex scenarios
+- Implement advanced simulation techniques for performance analysis
+- Apply systems analysis methodologies to real-world problems
+- Evaluate system performance through multiple metrics and criteria
+- Design optimization strategies based on analytical findings
 
-We observed that changes in distractors or phrasing had a nonlinear impact on system output due to the complexity of natural language processing. As a result, strategies such as ensemble modeling and label smoothing were proposed to improve robustness.
+## Key Components
 
-## 📋 System Requirements
+### 1. System Modeling
+- **Mathematical Models**: Development of analytical models representing system behavior
+- **Performance Metrics**: Definition and implementation of key performance indicators
+- **System Parameters**: Identification and analysis of critical system variables
+- **Constraint Analysis**: Evaluation of system limitations and boundaries
 
-### Functional Requirements
-- *RF1:* Load multiple-choice questions.
-- *RF2:* Load a database of misconceptions.
-- *RF3:* Analyze linguistic/conceptual patterns in distractors.
-- *RF4:* Generate at least 25 plausible misconceptions per distractor.
-- *RF5:* Label each misconception with the corresponding distractor.
-- *RF6:* Export the labeled misconceptions to formats like CSV or JSON.
+### 2. Simulation Framework
+- **Simulation Design**: Implementation of comprehensive simulation environment
+- **Scenario Analysis**: Multiple scenario testing and comparison
+- **Data Collection**: Systematic data gathering and processing methods
+- **Validation**: Model verification and validation procedures
 
-### Non-Functional Requirements
-- *RNF1:* Fast response time for generating misconceptions.
-- *RNF2:* Scalable processing for large datasets.
-- *RNF3:* Support for integration with modern LLMs (e.g., GPT, Claude).
+### 3. Performance Analysis
+- **Statistical Analysis**: Comprehensive statistical evaluation of results
+- **Comparative Studies**: Performance comparison across different configurations
+- **Sensitivity Analysis**: Impact assessment of parameter variations
+- **Optimization**: Identification of optimal system configurations
 
-## 🧠 System Architecture
+## Methodology
+1. **Problem Definition**: Clear articulation of system analysis objectives
+2. **Model Development**: Creation of mathematical and simulation models
+3. **Implementation**: Development of simulation framework and tools
+4. **Experimentation**: Systematic testing across multiple scenarios
+5. **Analysis**: Statistical evaluation and interpretation of results
+6. **Optimization**: Identification of improvement opportunities
 
-We created a high-level architecture diagram showing data flow through various components:
+## Results and Findings
+- Comprehensive system performance characterization
+- Identification of critical performance factors
+- Optimization recommendations for system improvement
+- Validated analytical framework for future applications
 
-1. *Trainer Data:* Input of questions and misconceptions.
-2. *Filter Affinity:* Identifies the most relevant misconceptions.
-3. *Less Similar:* Discards low-affinity associations.
-4. *NLP Model:* Associates misconceptions with distractors using affinity scoring.
-5. *Verification:* Validates associations; if scores are low, retraining is triggered.
-6. *Distractor Tagged:* Final output with high-affinity, validated misconceptions.
-
-This iterative approach ensures quality control and continuous model improvement.
-
-## ⚖️ Reducing Sensitivity
-
-To prevent chaotic outputs, we implemented several control mechanisms:
-
-- Filtered out irrelevant or malformed data before training.
-- Avoided semantic and syntactical noise in question phrasing.
-- Added a verification stage to validate outputs before final labeling.
-- Created feedback loops to retrain the model when predictions didn't meet thresholds.
-
-This layered strategy helped stabilize system performance against small input changes.
-
-## 🛠️ Tech Stack
-
-The technologies selected for implementation were:
-
-- *Python:* For general system development and ML workflows.
-- *Claude 3.5 Sonnet (Anthropic API):* Used to generate and analyze misconceptions due to its strong reasoning capabilities.
-- *GPT-4 (OpenAI):* Used in the verification stage to ensure label quality and concept clarity.
-- *JSON/CSV:* For exporting results in readable formats.
-
-This combination offered flexibility, strong NLP capabilities, and ease of integration.
+## Tools and Technologies
+- Advanced simulation software and frameworks
+- Statistical analysis tools
+- Mathematical modeling environments
+- Performance monitoring and evaluation systems
